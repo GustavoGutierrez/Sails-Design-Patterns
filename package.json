@@ -6,7 +6,6 @@
   "keywords": [],
   "dependencies": {
     "ejs": "~0.8.4",
-    "es5-decorator": "0.0.1",
     "grunt": "0.4.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-coffee": "~0.10.1",
@@ -23,6 +22,7 @@
     "rc": "~0.5.0",
     "sails": "~0.11.0",
     "sails-disk": "~0.10.0",
+    "sails-hook-dotenv": "^0.1.1",
     "sails-mongo": "^0.12.1"
   },
   "scripts": {
