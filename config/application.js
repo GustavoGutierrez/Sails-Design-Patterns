@@ -5,10 +5,6 @@ const BaseControllers = requireAll(  __dirname + '/../api/base/');
 const Decorators = requireAll(  __dirname + '/../api/decorators/');
 const Observers = requireAll(  __dirname + '/../api/observers/');
 
-module.exports = {
-  appName: 'Desing Patterns with SailsJS'
-};
-
 (function() {
 
   const has = Object.prototype.hasOwnProperty;
