@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "ejs": "~0.8.4",
+    "es5-decorator": "0.0.1",
     "grunt": "0.4.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-coffee": "~0.10.1",
@@ -35,5 +36,8 @@
     "url": "git://github.com/gustavo/patterns.git"
   },
   "author": "gustavo",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "sails-generate-hook": "0.0.1"
+  }
 }

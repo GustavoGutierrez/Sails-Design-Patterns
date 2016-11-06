@@ -1,55 +1,30 @@
-//https://addyosmani.com/resources/essentialjsdesignpatterns/book/
+//  Required
+//const Base = require('../base/');
+//const ControllerDecorator = require('../decorators/ControllerDecorator');
+var Controller = Object.assign(
 
-var Controller = {
-    find:function(req, res){
+  {
+    find:(req, res)=>{
       return res.ok({success:"Ok"});
     }
-};
-
-/**
- * Objetos base extendibles
- */
-var BaseController = {
-  find:function(req, res){
-    console.log('find Base');
-    return res.ok({success:"Ok find Decorator"});
-  }
-};
-
-var CustomController = {
-  findOne:function(req, res) {
-    return res.ok({success:"Ok findOne"});
-  }
-};
-
-/**
- * Extends use assign
- */
-var AwsPricingController =  Object.assign(Controller, BaseController, CustomController);
-
-
-/**
- * Decorator
- * https://es.wikipedia.org/wiki/Decorator_(patr%C3%B3n_de_dise%C3%B1o)
- * https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty
- */
-
-Object.defineProperty(AwsPricingController, 'find', {
-  value: function(req, res) {
-    return res.ok({success:"Find desde Decorator"});
   },
-  enumerable:true
-});
 
+ /**
+  * EXTENDS
+  * Extend the functionality of the controller
+  */
+  BaseController,
+  CustomController
+);
 
-Object.defineProperty(AwsPricingController, 'destroy', {
-  value: function(req, res) {
-    return res.ok({success:"Destroy desde Decorator"});
-  },
-  enumerable:true
-});
+/**
+ *  DECORATORS
+ *  Add decorators to the controller
+ */
+ControllerDecorator(Controller);
 
-
-console.log('AwsPricingController', AwsPricingController);
-
-module.exports = AwsPricingController;
+/**
+ *  EXPORT MODULE
+ *  Export extended controller module and decorated
+ */
+module.exports = Controller;
