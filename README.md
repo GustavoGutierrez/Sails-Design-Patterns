@@ -1,7 +1,8 @@
 # Sails Design Patterns
 
 Implementation of design patterns.
-Use (books)[https://addyosmani.com/resources/essentialjsdesignpatterns/book/]
+Use [books](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+[Node Patterns](https://github.com/azat-co/node-patterns)
 
 ## Load Decorator and Base in global
 Objects and exported to global functions to extend and use globally
