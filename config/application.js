@@ -1,14 +1,18 @@
-const BaseControllers = require('../api/base/');
-const Decorators = require('../api/decorators/');
-const Observers = require('../api/observers/');
+const requireAll = require('require-all');
 const _ = require('lodash');
-const has = Object.prototype.hasOwnProperty;
+
+const BaseControllers = requireAll(  __dirname + '/../api/base/');
+const Decorators = requireAll(  __dirname + '/../api/decorators/');
+const Observers = requireAll(  __dirname + '/../api/observers/');
 
 module.exports = {
   appName: 'Desing Patterns with SailsJS'
 };
 
-function loadInGlobal() {
+(function() {
+
+  const has = Object.prototype.hasOwnProperty;
+
   // Load in global var
   Object.defineProperty(global, '__stack', {
     get: function() {
@@ -60,6 +64,7 @@ function loadInGlobal() {
       global[key] = func;
     }
   });
-}
 
-loadInGlobal();
+
+})();
+
