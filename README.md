@@ -1,7 +1,8 @@
 # Sails Design Patterns
 
-Implementation of design patterns.
-Use [books](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+Implementation of design patterns based in:
+
+[Books](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 [Node Patterns](https://github.com/azat-co/node-patterns)
 
