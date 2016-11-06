@@ -5,6 +5,11 @@ const BaseControllers = requireAll(  __dirname + '/../api/base/');
 const Decorators = requireAll(  __dirname + '/../api/decorators/');
 const Observers = requireAll(  __dirname + '/../api/observers/');
 
+/**
+ * This configuration of the application is responsible for overall load decorators, bases, observers etc.
+ * To have them available in any part of the application site.
+ * This loads before the controlladores to initialize.
+ */
 (function() {
 
   const has = Object.prototype.hasOwnProperty;
@@ -42,7 +47,7 @@ const Observers = requireAll(  __dirname + '/../api/observers/');
     }
   });
 
-  // Load in globals methods
+  // Load in globals methods and objects
   _.each(Observers, (func, key)=>{
     if(!has.call(global, key)){
       global[key] = func;
